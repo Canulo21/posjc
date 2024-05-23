@@ -37,6 +37,10 @@ const upload = multer({
 // Serve static files from the 'src/assets/product-image' directory
 app.use("/assets/product-image", express.static("src/assets/product-image"));
 
+app.get("/", (req, res) => {
+  console.log("im in");
+});
+
 //** For Users  **//
 
 // Login API endpoint
