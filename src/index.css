@@ -1,0 +1,219 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #707070;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+
+h1,h2,h3,h4,h5 {
+  font-family: "Bree Serif", serif;
+  color: #707070;
+  letter-spacing: 1.75px;
+  text-transform: uppercase;
+  text-shadow: 0 3px 6px rgba(0, 0, 0, .16);
+}
+
+h1 {
+  font-size: 38px;
+}
+h2 {
+  font-size: 34px;
+}
+h3 {
+  font-size: 32px;
+}
+h4 {
+  font-size: 30px;
+}
+h5 {
+  font-size: 25px;
+}
+
+a:hover {
+  color: #38768b;
+}
+
+#container {
+  padding: 65px 40px 50px;
+}
+
+.bg {
+  background: url('/src/Assets/images/bg-login.jpg');
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.bg-user,
+.prod-bg {
+  position: relative;
+  height: 100%;
+}
+.prod-bg::before,
+.bg-user::before {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  opacity: .06;
+  z-index: -1;
+}
+.bg-user::before {
+  background: url('/src/Assets/images/user-bg.png') no-repeat center center;
+  filter: drop-shadow(0 3px 6px rgba(0, 0, 0, .9));
+  background-size: contain;
+}
+.prod-bg::before {
+  background: url('/src/Assets/images/prod-bg.png') no-repeat center center;
+  filter: drop-shadow(0 3px 6px rgba(0, 0, 0, .9));
+  background-size: contain;
+}
+
+.modal-form {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding-top: 60px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  background: rgba(255,255,255, .9);
+  z-index: 1;
+}
+.modal-form > form {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, .16);
+}
+
+.no-data {
+  position: relative;
+  filter: drop-shadow(0 3px 6px rgba(0, 0, 0, .6));
+  animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+	0% {
+    filter: drop-shadow(0 5px 15px 0px rgba(0,0,0,0.6));
+		transform: translatey(0px);
+	}
+	50% {
+    filter: drop-shadow(0 25px 15px 0px rgba(0,0,0,0.2));
+		transform: translatey(-15px);
+	}
+	100% {
+    filter: drop-shadow(0 5px 15px 0px rgba(0,0,0,0.6));
+		transform: translatey(0px);
+	}
+}
+
+.prod-img,
+.dashboard-icon,
+.dashboard-icon svg  {
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  -moz-transition: all 0.3s ease-in-out 0s;
+  -o-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+.prod-img {
+  filter: drop-shadow(0 3px 6px rgba(0,0,0, .6));
+}
+.prod-img:hover{
+  transform: scale(0.9);
+}
+
+table tbody tr:hover {
+  background-color: #b2bfa6;
+  color: #fff;
+}
+
+table.add-cart tr:hover {
+  background: transparent;
+  color: inherit;
+}
+
+.dashboard-icon {
+  position: relative;
+  top: 0;
+}
+.dashboard-icon:hover {
+  top: -10px;
+  box-shadow: 0 12px 12px rgba(0, 0, 0, .16);
+}
+.dashboard-icon svg:hover {
+  transform: scale(0.9);
+}
+
+
+hr {
+  margin: 10px;
+}
+.time-wrap {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.time-wrap p,
+.price-wrap p,
+.under-wrap p {
+  font-weight: 500;
+}
+.price-wrap {
+  margin-top: 15px;
+  margin-bottom: 30px;
+}
+.price-wrap p,
+.under-wrap p {
+  text-align: left;
+}
+.item-wrap {
+  display: block;
+  
+}
+.item-wrap p,
+.under-wrap p {
+  text-transform: uppercase;
+}
+.item-wrap p + p {
+  margin-top: 2px;
+}
+
+
+@media only screen and (max-width: 1025px)  {
+  button span {
+    display: none;
+  }
+}
