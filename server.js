@@ -39,6 +39,7 @@ app.use("/assets/product-image", express.static("src/assets/product-image"));
 
 app.get("/", (req, res) => {
   console.log("im in");
+  console.log("im ZUpp niiger");
   res.send("IM in NIGGER")
 });
 
